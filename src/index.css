@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  background-color: #2b2d42;
+  background-image: url("./assets/bg.png");
+}
+
+.file-upload {
+  display: grid;
+  grid-gap: 10px;
+  position: relative;
+  z-index: 1;
+  line-height: 1.333em;
+  margin-bottom: 0.5rem;
+}
+.file-upload label {
+  display: flex;
+  font-size: 1.7rem;
+
+  font-weight: lighter;
+  align-items: center;
+  transition: 0.4s ease;
+  font-family: monospace;
+}
+
+.file-upload label span {
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+.file-upload input {
+  background-color: #edf2f4;
+  position: relative;
+  /* z-index: 1; */
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-family: arial, sans-serif;
+  font-size: 1rem;
+  font-weight: regular;
+  box-sizing: border-box;
+}
+.file-upload input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+  margin-left: 10px;
+  padding: 0;
+  height: 40px;
+  width: 0;
+}
+.file-upload button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 0;
+  user-select: none;
+  /* z-index: 2; */
+  color: white;
+  background-color: #10ad4c;
+  /* border-radius: 0 3px 3px 0; */
+  font-size: 1rem;
+  font-weight: 800;
+  box-sizing: border-box;
+  border: 1px solid black;
+  /* border: 0px; */
+}
+.excel-import-container {
+  margin: 1rem;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(66, 50, 98, 0.35);
+  border: 1px solid #eaeaea;
+  border-radius: 0.5rem;
+  background: #f8edeb;
+  background-image: url("./assets/bg2.png");
+}
+
+.progress-bar {
+  height: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.excel-table-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin-top: 2rem;
+  background-color: #fff0f3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.excel-table-wrapper table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.excel-table-wrapper table thead {
+  display: table-header-group;
+}
+
+.excel-table-wrapper table thead tr {
+  display: table-row;
+  height: 30px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+
+.excel-table-wrapper table thead tr th {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  padding: 0 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.excel-table-wrapper table thead tr th:last-child {
+  border-right: 0;
+}
+
+.excel-table-wrapper table tbody {
+  display: table-row-group;
+}
+
+.excel-table-wrapper table tbody tr {
+  display: table-row;
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.excel-table-wrapper table tbody tr td {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  padding: 0 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.excel-table-wrapper table tbody tr td:hover {
+  background-color: #e4c1f9;
+}
+
+.excel-table-wrapper table tbody tr:hover td:first-child {
+  background-color: #ff99c8;
+}
+
+.excel-table-wrapper table tbody tr:hover td:nth-child(2) {
+  background-color: #fcf6bd;
+}
+
+.excel-table-wrapper table tbody tr:hover td:nth-child(3) {
+  background-color: #a9def9;
+}
+
+.excel-table-wrapper table tbody tr:hover {
+  background-color: #d0f4de;
+}
+
+.excel-table-wrapper table tbody tr td input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.excel-table-wrapper table tbody tr td input:focus {
+  outline: none;
+}
+
+.excel-table-wrapper table tbody tr td input::-webkit-outer-spin-button,
+.excel-table-wrapper table tbody tr td input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.excel-table-wrapper table tbody tr td input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.excel-table-wrapper table tbody tr td input[type="number"]:focus {
+  outline: none;
+}
+
+.excel-table-wrapper table tbody tr td input[type="number"]:disabled {
+  background-color: #f1f1f1;
+}
+
+.excel-table-wrapper table tbody tr td input[type="number"]:disabled:focus {
+  outline: none;
+}
+
+.excel-table-wrapper
+  table
+  tbody
+  tr
+  td
+  input[type="number"]:disabled::-webkit-outer-spin-button,
+.excel-table-wrapper
+  table
+  tbody
+  tr
+  td
+  input[type="number"]:disabled::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
